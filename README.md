@@ -56,16 +56,6 @@ A Python-based automation tool that enables users to respond to Instagram messag
 1. Run the script to log into your Instagram account automatically.
 2. The bot will monitor incoming messages and respond based on the predefined rules.
    
-### Project Structure
-Instagram-Auto-Responder-main/
-│
-├── auto_responder.py         # Main script for auto-responses
-├── requirements.txt          # List of dependencies
-├── .env                      # Environment variables (optional)
-├── README.md                 # Project documentation
-├── utils/                    # Utility functions and scripts
-└── tests/                    # Testing scripts
-
 ### Future Enhancements
 - Add machine learning to generate intelligent responses.
 - Support for multimedia message responses (e.g., images, videos).
