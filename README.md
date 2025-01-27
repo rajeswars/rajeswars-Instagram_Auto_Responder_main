@@ -1,78 +1,76 @@
-# 📬 Instagram Auto Responder
+# Instagram Auto Responder
 
-Instagram Auto Responder is a tool that automatically responds to direct messages on Instagram using the mobile private API.
+A Python-based automation tool that enables users to respond to Instagram messages automatically. This project simplifies the process of managing messages by sending predefined responses.
 
-## ✨ Features
+---
 
-- 🚀 Auto respond to any direct threads of your Instagram account including spam inbox.
-- 📩 Send custom text messages to users.
-- 🕒 Adjustable wait time between responses.
-- 📁 Save responded users to avoid sending multiple messages to the same user.
-- 🔒 Creating lock file to prevent multiple usage of single account in the same time.
+## Features
 
+- Automatically respond to incoming Instagram messages.
+- Predefined responses based on user-defined rules.
+- Easy to configure and use.
 
-## 📋 Requirements
+---
 
-- Python 3.7+
-- Installing libraries from `requirements.txt`
+## Technologies Used
 
-## 🚀 Getting Started
+- **Python**: Core scripting language for automation.
+- **Selenium**: For automating browser interactions with Instagram.
+- **Instagram API** *(if applicable)*: For seamless integration with Instagram messaging.
 
-1. Clone this repository to your local machine.
-2. Install the required Python modules with `pip install -r requirements.txt`.
-3. Run `login.py` to start the login process. On the first run, it will guide you through the login process and create a configuration file in the `accounts` directory.
-4. Run `main.py` to start the auto responder.
-5. **Important:** If you force stop the script, you should delete the lock file yourself. The script won’t delete it in case of a forced stop.
+---
 
+## Setup Instructions
 
-## 📝 Usage
+### Prerequisites
+1. **Python**: Ensure Python 3.x is installed on your system.
+2. **Browser Driver**: Install the browser driver (e.g., ChromeDriver) for Selenium.
+3. **Instagram Account**: An active Instagram account.
 
-To use the Instagram Auto Responder, you need to provide your Instagram username and password. The `login.py` script will guide you through the login process and create a configuration file in the `accounts` directory. The configuration file will look like this:
+### Installation Steps
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/rajeswars/rajeswars-Instagram_Auto_Responder_main.git
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd rajeswars-Instagram_Auto_Responder_main
+   ```
+3. Install required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Configure your Instagram credentials in the .env file (if using environment variables for security):
+   ```bash
+   INSTAGRAM_USERNAME=your_username
+   INSTAGRAM_PASSWORD=your_password
+   ```
+### Running the Application
+1. Launch the script:
+   ```bash
+   python auto_responder.py
+   ```
+2. Follow the prompts to set predefined responses.
 
-```json
-{
-    "account": "your_instagram_username",
-    "data": {
-        "device_id": "your_device_id",
-        "uuid": "your_uuid",
-        "IG-Set-Authorization": "your_ig_set_authorization",
-        "proxy": "your_proxy"
-    },
-    "num_replies": 5,
-    "messages": ["Message 1", "Message 2", "Message 3"]
-}
+### Usage
+1. Run the script to log into your Instagram account automatically.
+2. The bot will monitor incoming messages and respond based on the predefined rules.
+   
+### Project Structure
+Instagram-Auto-Responder-main/
+│
+├── auto_responder.py         # Main script for auto-responses
+├── requirements.txt          # List of dependencies
+├── .env                      # Environment variables (optional)
+├── README.md                 # Project documentation
+├── utils/                    # Utility functions and scripts
+└── tests/                    # Testing scripts
 
-```
+### Future Enhancements
+- Add machine learning to generate intelligent responses.
+- Support for multimedia message responses (e.g., images, videos).
+- Integration with cloud services for 24/7 operation.
+  
+### Contributing
+Contributions are welcome! Feel free to fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
-You can modify the `num_replies` field to change the number of replies the auto responder will send before stopping. The `messages` field is a list of messages that the auto responder will choose from when replying to a user. Adjust it as you need. By default the tool replies only for unread threads.
-
-
-
-## 👥 Contributing
-
-Hello! It's cool you are interested in contributing to this project. You are more than welcome to contribute. To ensure consistency and quality, please adhere to the following guidelines:
-
-1. **Fork & Pull Request**: All changes must be made through a fork of the repository and a pull request. This allows to review and approve changes before they are merged into the main project.
-
-2. **Pull Request Description**: Each pull request should include a detailed description of the changes being made. This should include the purpose of the changes, what issues they resolve, and any potential impacts.
-
-3. **Code Review**: All pull requests must go through a code review process. You may require one or more team members to review and approve changes before they are merged.
-
-4. **Tests**: All changes must pass tests before they are merged. You may require pull requests to include appropriate unit tests for the changes being made.
-
-5. **Coding Standards Compliance**: All changes must comply with the project's coding standards. You may require pull requests to comply with specific coding style guidelines.
-
-
- 
-## ⚠️ Disclaimer
-This tool is for educational purposes only. The use of this tool is your responsibility. Please respect the privacy of others and always follow terms of service.
-
-
-## ⭐️ Show your support
-
-Leave a star if that project helped you!
-
-## 📝 License
-
-Copyright © 2024 [Skuxblan](https://github.com/Skuxblan).
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
